@@ -1,2 +1,2 @@
 # MechanicalHax.github.io
-Website for hosting notes perhaps
+Website for hosting condensed and formalized notes perhaps
