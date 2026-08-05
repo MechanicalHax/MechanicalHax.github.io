@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tpmathews</title>
+
+    <!-- Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+</head>
+<body>
+
+<h1 style="text-align: center;">Note 1?</h1>
+
+<div class="markdown">
+
+Inline math:
+
+$\sqrt{2}$
+
+Display math:
+
+</div>
+
+<script>
+    document.querySelectorAll(".markdown").forEach(el => {
+        el.innerHTML = marked.parse(el.textContent);
+    });
+
+    MathJax.typesetPromise();
+</script>
+
+</body>
+</html>
